@@ -1,0 +1,142 @@
+<html>
+<head> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A demo app illustrating advanced customer notification with IBM Mobile Customer engagement.">
+    <meta name="author" content="Vincent Perrin">
+    <link rel="icon" href="favicon.ico">
+        
+<title>Alerting</title>
+        <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+
+</head>
+<body role="document" >
+<div class="container theme-showcase" role="main">
+  <!-- Fixed navbar -->
+  <p>
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Custom Notifications with IBM Mobile Customer Engagement (Demo Site)</a>
+        </div>
+      </div>
+    </div>
+        
+<div class="row">
+<div class="col-lg-8">
+  <div class="panel panel-info">
+  <div class="panel-heading">Message Details</div>
+  <div class="panel-body">
+  <div class="form-group">
+<label for="xid">Your XiD:</label><input type='text' name='xid' id='xid' class="form-control" placeholder="" value="">
+
+ <div class="form-group">
+  <label for="sel1">Select the type of the notification you want to send:</label>
+  <select class="form-control" id="sel1">
+    <option>...........</option>
+    <option>Wire Transfer Validation</option>
+    <option>Meeting Confirmation</option>
+    <option>Call your advisor</option>
+    <option>Bluemix Ad (Large Text)</option>
+    <option>Bluemix Ad (Large Image)</option>
+    <option>Chat Head Watson</option>
+    <option>Chat Head Bluemix</option>
+  </select>
+</div>
+<label for="subject">Subject:</label><input type='text' name='subject' id='subject' class="form-control" placeholder="" value="">
+<label for="json">JSON Payload:</label><textarea rows="3" name='rich_message' id='rich_message' class="form-control" placeholder="Select the type of notification you want to send just above.."></textarea>
+</div> 
+<div class="btn-group">
+<button id='vmr' class="btn btn-success">Send message</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-lg-4">
+  <div class="panel panel-info">
+  <div class="panel-heading">To download the app (Android Only)</div>
+  <div class="panel-body">
+
+Click <a href="./Notif_AppV2.apk">here</a>
+</div>
+</div>
+</div>
+</div>
+
+<p class="text-right"><em>Author: Vincent Perrin.</em></p>
+<div class="row">
+<div class="col-lg-12">
+
+<div class="alert alert-info" role="alert">Six examples of JSON Payload use on Android</div>
+</br>
+</div>
+</div>
+<div class="row">
+
+<div class="col-sm-6">
+<b><em>{'com.xtify.notification.STYLE':'LinkedIN',
+'com.xtify.notification.ACCOUNT':'Do you accept the money transfer?'}</em></b></br></br>
+<center><img src="./images/accept.png" width="288" alt="..." class="img-rounded"></center>
+
+</div> 
+<div class="col-sm-6">
+<b><em>{'com.xtify.notification.STYLE':'RDV',
+'com.xtify.notification.ACCOUNT':'We have a meeting tomorrow at 11am'}</em></b></br></br>
+<center><img src="./images/calendar.png" width="288" alt="..." class="img-rounded"></center>
+
+</div>
+
+</div>
+</br></br>
+<div class="row">
+
+<div class="col-sm-6">
+<b><em>{'com.xtify.notification.STYLE':'BIG_TEXT','com.xtify.notification.BIG_TEXT':'IBM Bluemix is a cloud platform as a service (PaaS) developed by IBM. 
+It supports several programming languages and services as well as integrated DevOps 
+to build, run, deploy and manage applications on the cloud. Bluemix is based on Cloud Foundry open technology and runs on SoftLayer infrastructure.',
+'com.xtify.notification.LARGE_ICON':'http:\/\/www.ostiasolutions.com\/images\/bluemix2.png'}</em></b></br></br>
+<center><img src="./images/image.png" width="288" alt="..." class="img-rounded"></center>
+
+</div> 
+<div class="col-sm-6">
+<b><em>{'com.xtify.notification.STYLE':'BIG_PICTURE',
+'com.xtify.notification.BIG_PICTURE':'http:\/\/cdn.evbuc.com\/images\/5273211\/19365402509\/1\/logo.png',
+'com.xtify.notification.LARGE_ICON':'http:\/\/www.ostiasolutions.com\/images\/bluemix2.png'}</em></b></br></br></br></br></br>
+<center><img src="./images/limage.png" width="288" alt="..." class="img-rounded"></center> 
+
+</div>
+
+</div>
+</br></br>
+<div class="row">
+<div class="col-sm-6">
+<b><em>{'com.xtify.notification.STYLE':'Call','com.xtify.notification.ACCOUNT':'Call me or Send me a SMS: ','com.xtify.notification.CALLNUMBER':'06XXXXXXXX'}</em></b></br></br></br>
+<center><img src="./images/call.png" width="288" alt="..." class="img-rounded"></center>
+</br><div class="alert alert-danger" role="alert">Warning : Generate a call or Send a SMS based on the number you use.</div>
+</div>
+<div class="col-sm-6">
+<b><em>{'com.xtify.notification.STYLE':'ChatHead','com.xtify.notification.IMAGE':'watson'}</em></b> or <b><em>{'com.xtify.notification.STYLE':'ChatHead','com.xtify.notification.IMAGE':'bluemix'}</em></b></br></br>
+<div class="row">
+<div class="col-sm-6">
+<img src="./images/chathead.png" width="288" alt="..." class="img-rounded">
+</div>
+<div class="col-sm-6">
+<img src="./images/watson2.png" width="288" alt="..." class="img-rounded">
+
+</div>
+</div>
+</br>
+<div class="alert alert-info" role="alert">This notification uses the concept of ChatHeads introduced by Facebook.</div>
+</div>
+</div>
+
+<!-- Import of the business logic -->
+<script src="js/app.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+</body>
+</html>
