@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+timer = setInterval(updateDiv,100);
+function updateDiv(){
+    var editorText = CKEDITOR.instances.editor1.getData();
+    $('#trackingDiv').html(editorText);
+}
+</script>
+</head>
+<body>
+
+<textarea class="ckeditor" id="editor1" name="editor1">This is sample text</textarea>
+<div id="trackingDiv" ></div>
+
+<script type="text/javascript">
+    CKEDITOR.replace( 'editor1' );
+
+    timer = setInterval(updateDiv,100);
+    function updateDiv(){
+        var editorText = CKEDITOR.instances.editor1.getData();
+        $('#trackingDiv').html(editorText);
+    }   
+</script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/ckeditor.js"></script>
+</body>
+</html>

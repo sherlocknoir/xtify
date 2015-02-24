@@ -1,0 +1,10 @@
+---
+applications:
+- name: AlertXtify
+  memory: 512M
+  host: alertxtify
+  domain: mybluemix.net
+  env: {
+    }
+  services: {
+    }
